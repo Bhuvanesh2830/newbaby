@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kids Boutique</title>
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+
+<h1 class="title">🌟 Tiny Trends Boutique 🌟</h1>
+<p class="subtitle">Cute dresses for little stars</p>
+
+<!-- Dress Selector -->
+<div class="dress-selector">
+    <input type="radio" name="dress" id="dress1" checked>
+    <input type="radio" name="dress" id="dress2">
+    <input type="radio" name="dress" id="dress3">
+
+    <div class="dress-cards">
+        <label for="dress1" class="card">
+            <img src="baby.jpg">
+            <p>little star</p>
+        </label>
+
+        <label for="dress2" class="card">
+            <img src="babygl.png">
+            <p>Party Frock</p>
+        </label>
+
+        <label for="dress3" class="card">
+            <img src="both.jpg">
+            <p>Casual Wear</p>
+        </label>
+    </div>
+
+    <!-- Dress Details -->
+    <div class="details">
+        <div class="detail d1">
+            <h2>👑 little star</h2>
+            <ul>
+                <li>Soft net fabric</li>
+                <li>Available sizes: 1–6 yrs</li>
+                <li>Colors: Pink, Purple</li>
+            </ul>
+        </div>
+
+        <div class="detail d2">
+            <h2>🎉 Party Frock</h2>
+            <ul>
+                <li>Shiny satin material</li>
+                <li>Available sizes: 2–8 yrs</li>
+                <li>Colors: Red, Blue</li>
+            </ul>
+        </div>
+
+        <div class="detail d3">
+            <h2>🌈 Casual Wear</h2>
+            <ul>
+                <li>100% cotton</li>
+                <li>Available sizes: 1–10 yrs</li>
+                <li>Colors: Yellow, Green</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<style>
+    body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(#ffe6f0, #e6f7ff);
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    color: #ff4d94;
+    font-size: 40px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #555;
+}
+
+.dress-selector input {
+    display: none;
+}
+
+.dress-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ff66b2;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Details Section */
+.details {
+    margin-top: 30px;
+}
+
+.detail {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+}
+
+.detail h2 {
+    color: #ff4d94;
+}
+
+.detail ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+/* Show details when clicked */
+#dress1:checked ~ .details .d1,
+#dress2:checked ~ .details .d2,
+#dress3:checked ~ .details .d3 {
+    display: block;
+}
+
+
+</style>
